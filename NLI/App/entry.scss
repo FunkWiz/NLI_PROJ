@@ -1,0 +1,67 @@
+﻿@import '../Assets/Css/variables.scss';
+@import '../Assets/Css/mixins.scss';
+
+html {
+    touch-action: manipulation;
+    font-size: 62.5%;
+}
+
+body {
+    text-align: center;
+    color: $white;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+body, button {
+    font-family: $font-family;
+}
+
+body, img {
+    /*user-select: none;*/
+    -webkit-user-drag: none;
+}
+
+#root {
+    direction: rtl;
+    padding-bottom: 80px;
+    min-width: 980px;
+    min-height: 92vh;
+
+    &.floating {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+input, select {
+    border: 0;
+    box-sizing: border-box;
+}
+
+@mixin placeholderStyle() {
+    color: $black;
+    opacity: 1;
+}
+
+::-webkit-input-placeholder {
+    @include placeholderStyle();
+}
+
+:-moz-placeholder {
+    @include placeholderStyle();
+}
+
+::-moz-placeholder {
+    @include placeholderStyle();
+}
+
+:-ms-input-placeholder {
+    @include placeholderStyle();
+}

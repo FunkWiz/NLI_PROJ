@@ -208,6 +208,22 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\entry.js" />
+    <Content Include="Assets\Js\ArticleMgr.js" />
+    <Content Include="Assets\Js\AttachDrag.js" />
+    <Content Include="Assets\Js\DateHelper.js" />
+    <Content Include="Assets\Js\LoadActions.js" />
+    <Content Include="Assets\Js\Navigator.js" />
+    <Content Include="Assets\Js\ScrollActions.js" />
+    <Content Include="Assets\Js\scrollTo.js" />
+    <Content Include="Assets\Js\SwipeEvents.js" />
+    <Content Include="Assets\Js\throttle.js" />
+    <Content Include="Assets\Js\useful.js" />
+    <Content Include="Components\Abstracts\Component\Component.js" />
+    <Content Include="Components\Footer\Footer.view.js" />
+    <Content Include="Components\Header\Components\NavList\NavList.view.js" />
+    <Content Include="Components\Header\Header.view.js" />
+    <Content Include="Components\MainComponent\MainComponent.view.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -220,6 +236,23 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Services\ApiService.js" />
+    <Content Include="Services\ImageService.js" />
+    <Content Include="Services\PagingService.js" />
+    <Content Include="Services\UrlService.js" />
+    <Content Include="webpack.config.js" />
+    <Content Include="package.json" />
+    <Content Include="Api\urls.json" />
+    <Content Include="App\entry.scss" />
+    <Content Include="Assets\Css\fonts.scss" />
+    <Content Include="Assets\Css\reset.scss" />
+    <Content Include="Assets\Css\_mixins.scss" />
+    <Content Include="Assets\Css\_variables.scss" />
+    <Content Include="Components\Header\Components\NavList\NavList.scss" />
+    <Content Include="Components\Header\Components\NavList\pages.json" />
+    <Content Include="Components\Header\Header.scss" />
+    <Content Include="Components\Footer\Footer.scss" />
+    <Content Include="Components\MainComponent\MainComponent.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

@@ -1,0 +1,76 @@
+﻿@mixin abs-center() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+@mixin abs-bot-center($bot-pad: 0) {
+    position: absolute;
+    bottom: $bot-pad;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+@mixin abs-vertical-center() {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+@mixin animation-performance() {
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+@mixin circle($size: 145px, $bg: #000) {
+    @include size($size);
+    background-color: $bg;
+    border-radius: 50%;
+}
+
+@mixin sizeAndColor($size: 145px, $bg: #000) {
+    @include size($size);
+    background-color: $bg;
+    border-radius: 50%;
+}
+
+@mixin play-btn-triangle($size: 45px, $bg: #fff, $adjust: 10px) {
+    direction: ltr;
+    width: 0;
+    height: 0;
+    border-top: ($size - $adjust) solid transparent;
+    border-bottom: ($size - $adjust) solid transparent;
+    border-left: ($size) solid ($bg);
+}
+
+@mixin size($size) {
+    width: $size;
+    height: $size;
+}
+
+@mixin border($width, $radius: 15px) {
+    border: $width solid;
+    border-top-width: ($width / 2);
+    border-left-width: ($width / 2);
+    border-radius: $radius;
+}
+
+
+
+@mixin text-shadow-blur($color: #000, $blurSize: 7px, $pivot: 0, $iterations: 1) {
+    $shadow: ();
+    @for $i from 1 through $iterations {
+        $shadow: append($shadow, $pivot $pivot $blurSize $color, comma);
+    }
+    text-shadow: $shadow;
+}
+
+@mixin text-shadow($color: #000, $size: 2px) {
+    text-shadow: $size 0 0 $color, (-$size + 4) 0 0 $color, 0 $size 0 $color,  0 -$size  0 $color;
+}

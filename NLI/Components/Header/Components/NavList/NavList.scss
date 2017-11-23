@@ -1,0 +1,125 @@
+﻿@import '../../../../Assets/Css/variables.scss';
+
+$icons: ( home "home.png", search "search.png", archive "folder.png", articles "star.png", tools "unlink.png" );
+$transitionTime: .2s;
+
+@mixin list-icons($color: 'black') {
+    @each $iconName, $imgName in $icons {
+        &.#{$iconName} {
+            .site-navigation-item-icon {
+                background-image: url(/Content/Images/icons/#{$color}/#{$imgName});
+            }
+        }
+    }
+}
+
+.site-navigation-item {
+    display: inline-block;
+    margin-left: 30px;
+    cursor: pointer;
+    transition: color $transitionTime;
+    position: relative;
+
+    &.current, &:hover {
+        color: $red;
+        @include list-icons('red');
+    }
+
+    @include list-icons('black');
+
+    &:hover {
+        .site-navigation-external-list {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.site-navigation-item-link {
+    font-size: 1.6rem;
+
+    &, &:hover, &:visited {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    * {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.site-navigation-item-icon {
+    transition: background-image $transitionTime;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 5px;
+}
+
+.site-navigation-external-list {
+    cursor: default;
+    position: absolute;
+    z-index: 9999;
+    left: 0;
+    right: 0;
+    width: 140%;
+    text-align: center;
+    padding: 5px;
+    margin-top: 5px;
+    border: 2px solid #d3d3d3;
+    border-radius: 4px;
+    background-color: $dark-gray;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .2s, opacity .2s;
+}
+
+.site-navigation-external-item {
+    padding: 10px 0;
+    position: relative;
+    border-bottom: 1px solid $white;
+    transition: background-color .2s;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &:hover {
+        background-color: $white;
+
+        a {
+            &, &:hover, &:visited {
+                color: $black;
+            }
+        }
+    }
+
+    a {
+        &, &:hover, &:visited {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}
+
+
+.site-logo {
+    position: relative;
+}
+
+.site-tmp-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate3d(-90px,0,0);
+    font-weight: 700;
+    font-size: 2rem;
+
+    span {
+        font-size: 80%;
+        color: $result-dark-gray;
+    }
+}

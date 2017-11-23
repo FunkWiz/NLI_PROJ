@@ -1,0 +1,22 @@
+﻿{
+  "SearchArticles": {
+    "url": "action/search",
+    "method": "get"
+  },
+  "Browse": {
+    "url": "action/browse",
+    "method": "get"
+  },
+  "RecentPapers": {
+    "url": "action/toprecent",
+    "method": "get"
+  },
+  "Chart": {
+    "url": "action/chart",
+    "method": "get"
+  },
+  "GetImage": {
+    "url": "action/image",
+    "method": "get"
+  }
+}

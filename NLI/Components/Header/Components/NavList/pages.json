@@ -1,0 +1,44 @@
+﻿{
+  "items": [
+    {
+      "id": 1,
+      "title": "דף הבית",
+      "href": "home/index",
+      "classAlias": "home"
+    },
+    {
+      "id": 2,
+      "title": "חיפוש מתקדם",
+      "href": "home/search",
+      "classAlias": "search"
+    },
+    {
+      "id": 3,
+      "title": "דפדוף",
+      "href": "home/archive",
+      "classAlias": "archive"
+    },
+    {
+      "id": 4,
+      "title": "הכתבות שלי",
+      "href": "home/articles",
+      "classAlias": "articles"
+    },
+    {
+      "id": 5,
+      "title": "כלי עזר",
+      "href": "#",
+      "classAlias": "tools",
+      "links": [
+        {
+          "title": "תמונות דיגיטליות",
+          "href": "http://yedfotoweb7/fotoweb/loginhidden.fwx"
+        },
+        {
+          "title": "מילון רב-מילים",
+          "href": "http://www.ravmilim.co.il/"
+        }
+      ]
+    }
+  ]
+}
