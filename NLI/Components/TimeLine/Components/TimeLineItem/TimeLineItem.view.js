@@ -9,7 +9,7 @@ export default class TimeLineItem extends Component  {
 
 	    this.markup = 
             `
-             <div class="timeline-item" >
+             <div class="timeline-item" data-value="${this.value}">
                 <h2 class="timeline-item-title">${this.title}</h2>
                 <h4 class="timeline-item-count">${this.count}</h4>
              </div>

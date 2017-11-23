@@ -208,6 +208,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Api\tags.json" />
     <Content Include="App\entry.js" />
     <Content Include="Assets\Js\ArticleMgr.js" />
     <Content Include="Assets\Js\AttachDrag.js" />
@@ -227,6 +228,10 @@
     <Content Include="Components\Header\Components\NavList\NavList.view.js" />
     <Content Include="Components\Header\Header.view.js" />
     <Content Include="Components\MainComponent\MainComponent.view.js" />
+    <Content Include="Components\Tags\Components\PosterItem\PosterItem.view.js" />
+    <Content Include="Components\Tags\Components\TagItem\TagItem.view.js" />
+    <Content Include="Components\Tags\Components\PosterList\PosterList.view.js" />
+    <Content Include="Components\Tags\Components\TagList\TagList.view.js" />
     <Content Include="Components\Tags\Tags.view.js" />
     <Content Include="Components\TimeLine\Components\TimeLineItem\TimeLineItem.view.js" />
     <Content Include="Components\TimeLine\Components\TimeLineList\TimeLineList.view.js" />
@@ -282,6 +287,10 @@
     <Content Include="Content\fonts\Rubik-Regular.eot" />
     <Content Include="Content\fonts\Rubik-Regular.ttf" />
     <Content Include="Content\fonts\Rubik-Regular.woff" />
+    <Content Include="Components\Tags\Components\TagItem\TagItem.scss" />
+    <Content Include="Components\Tags\Components\TagList\TagList.scss" />
+    <Content Include="Components\Tags\Components\PosterItem\PosterItem.scss" />
+    <Content Include="Components\Tags\Components\PosterList\PosterList.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -331,7 +340,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Components\Tags\Components\" />
     <Folder Include="Views\Action\" />
   </ItemGroup>
   <ItemGroup>

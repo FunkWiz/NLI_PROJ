@@ -7,6 +7,6 @@ export default class TimeLineList extends Component  {
 	    super();
 	    this.items = props.items;
 
-	    this.markup = this.items.map(i => new TimeLineItem(i).getHtml()).join('');
+	    this.markup = `<ul class="timeline-list">${this.items.map(i => new TimeLineItem(i).getHtml()).join('')}</ul>`;
 	}
 }

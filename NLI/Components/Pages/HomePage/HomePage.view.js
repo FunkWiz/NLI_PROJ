@@ -3,6 +3,8 @@ import Component from '../../Abstracts/Component/Component'
 import ApiService from '../../../Services/ApiService'
 import TimeLine from '../../TimeLine/TimeLine.view'
 import Categories from '../../Categories/Categories.view'
+import Tags from '../../Tags/Tags.view'
+
 export default class HomePage extends Component  {
 	constructor() {
 		super();
@@ -14,11 +16,10 @@ export default class HomePage extends Component  {
         //        BulkSize: 25
 		//    },
 		//}).then(console.log)
-		//${new TimeLine().getHtml()}
 		this.markup = 
             `
              <article class="site-page home-page">
-                ${new Categories().getHtml()}
+                ${new Tags().getHtml()}
              </article>
             `
 	}

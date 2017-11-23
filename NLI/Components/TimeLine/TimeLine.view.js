@@ -5,7 +5,7 @@ import decades from '../../Api/decades.json'
 
 export default class TimeLine extends Component  {
 	constructor() {
-		super();
+	    super();
 		this.markup = 
             `
              <div class="timeline">${new TimeLineList({items:decades.items}).getHtml()}</div>

@@ -1,26 +1,17 @@
-﻿import './Categories.scss'
+﻿import './Tags.scss'
 import Component from '../Abstracts/Component/Component'
-import CategoryList from './Components/CategoryList/CategoryList.view'
-import categories from '../../Api/categories.json';
+import tags from '../../Api/tags.json'
+import TagList from './Components/TagList/TagList.view'
+import PosterList from './Components/PosterList/PosterList.view'
 
-export default class Categories extends Component  {
+export default class Tags extends Component  {
 	constructor() {
 		super();
 		this.markup = 
             `
-             <div class="categories">
-                <div class="categories-heading">
-                    <div class="categories-decade-info-wrp">
-                        <div class="categories-decade-info">
-                            <h4 class="categories-decade-title">40s</h4>
-                            <h4 class="categories-decade-count">433</h4>
-                        </div>
-                        <ul class="categories-decade-line-list">
-                            <li class="categories-decade-line-item" data-decade="1960"></li>
-                        </ul>
-                    </div>
-                    <div class="categories-content-wrp">${new CategoryList({items: categories.items}).getHtml()}</div>
-                </div>
+             <div class="tags">
+                <div class="tags-heading">${new TagList({items: tags.items}).getHtml()}</div>
+                <div class="tags-content-wrp">${new PosterList({items: [{},{},{},{},{},{},{},{},{}]}).getHtml()}</div>
              </div>
             `
 	}

@@ -6,6 +6,6 @@ export default class CategoryList extends Component  {
 	constructor(props) {
 	    super();
 	    this.items = props.items;
-	    this.markup = this.items.map(i => new CategoryItem(i).getHtml()).join('');
+	    this.markup = `<ul class="category-list">${this.items.map(i => new CategoryItem(i).getHtml()).join('')}</ul>`;
 	}
 }
