@@ -7,7 +7,7 @@ import HomePage from '../Pages/HomePage/HomePage.view'
 export default class MainComponent extends Component  {
     constructor(){
         super();
-        this.markup = `<main class="app-wrap">   
+        this.markup = `<main class="app-wrap">
                             ${_getPageHtml(window._pageData.id)}
                        </main>`
     }

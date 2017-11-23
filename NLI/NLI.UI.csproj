@@ -223,7 +223,8 @@
     <Content Include="Components\Header\Components\NavList\NavList.view.js" />
     <Content Include="Components\Header\Header.view.js" />
     <Content Include="Components\MainComponent\MainComponent.view.js" />
-    <Content Include="Components\TimeLine\Components\TimeLineItem.view.js" />
+    <Content Include="Components\TimeLine\Components\TimeLineItem\TimeLineItem.view.js" />
+    <Content Include="Components\TimeLine\Components\TimeLineList\TimeLineList.view.js" />
     <Content Include="Components\TimeLine\TimeLine.view.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -257,7 +258,9 @@
     <Content Include="Components\Pages\HomePage\HomePage.view.js" />
     <Content Include="Components\Pages\HomePage\HomePage.scss" />
     <Content Include="Components\TimeLine\TimeLine.scss" />
-    <Content Include="Components\TimeLine\Components\TimeLineItem.scss" />
+    <Content Include="Components\TimeLine\Components\TimeLineItem\TimeLineItem.scss" />
+    <Content Include="Api\decades.json" />
+    <Content Include="Components\TimeLine\Components\TimeLineList\TimeLineList.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

@@ -1,6 +1,8 @@
 ﻿import './HomePage.scss'
 import Component from '../../Abstracts/Component/Component'
 import ApiService from '../../../Services/ApiService'
+import TimeLine from '../../TimeLine/TimeLine.view'
+
 export default class HomePage extends Component  {
 	constructor() {
 		super();
@@ -16,6 +18,7 @@ export default class HomePage extends Component  {
 		this.markup = 
             `
              <article class="site-page home-page">
+                ${new TimeLine().getHtml()}
              </article>
             `
 	}
