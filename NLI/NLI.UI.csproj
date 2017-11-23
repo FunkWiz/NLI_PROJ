@@ -227,11 +227,13 @@
     <Content Include="Components\Header\Components\NavList\NavList.view.js" />
     <Content Include="Components\Header\Header.view.js" />
     <Content Include="Components\MainComponent\MainComponent.view.js" />
+    <Content Include="Components\Tags\Tags.view.js" />
     <Content Include="Components\TimeLine\Components\TimeLineItem\TimeLineItem.view.js" />
     <Content Include="Components\TimeLine\Components\TimeLineList\TimeLineList.view.js" />
     <Content Include="Components\TimeLine\TimeLine.view.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\de_los_insurgentes_avenue_chihuahua_mexico.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -269,6 +271,17 @@
     <Content Include="Components\Categories\Categories.scss" />
     <Content Include="Components\Categories\Components\CategoryList\CategoryList.scss" />
     <Content Include="Components\Categories\Components\CategoryItem\CategoryItem.scss" />
+    <Content Include="Components\Tags\Tags.scss" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\HelveticaNeue.eot" />
+    <Content Include="Content\fonts\HelveticaNeue.ttf" />
+    <Content Include="Content\fonts\HelveticaNeue.woff" />
+    <Content Include="Content\fonts\Rubik-Regular.eot" />
+    <Content Include="Content\fonts\Rubik-Regular.ttf" />
+    <Content Include="Content\fonts\Rubik-Regular.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -318,8 +331,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\fonts\" />
-    <Folder Include="Content\images\" />
+    <Folder Include="Components\Tags\Components\" />
     <Folder Include="Views\Action\" />
   </ItemGroup>
   <ItemGroup>
