@@ -2,37 +2,37 @@
   "items": [
     {
     "title": "40s",
-    "count": "700",
-    "value": "40"
+    "count": "2272",
+    "value": "1940"
     },
     {
     "title": "50s",
-    "count": "512",
-    "value": "50"
+    "count": "1429",
+    "value": "1950"
     },
     {
     "title": "60s",
-    "count": "512",
-    "value": "60"
+    "count": "1079",
+    "value": "1960"
     },
     {
     "title": "70s",
-    "count": "512",
-    "value": "70"
+    "count": "1265",
+    "value": "1970"
     },
     {
     "title": "80s",
-    "count": "512",
-    "value": "80"
+    "count": "989",
+    "value": "1980"
     },
     {
     "title": "90s",
-    "count": "512",
-    "value": "90"
+    "count": "453",
+    "value": "1990"
     },
     {
     "title": "2000s",
-    "count": "512",
+    "count": "133",
     "value": "2000"
     }
   ] 
