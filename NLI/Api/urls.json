@@ -1,5 +1,5 @@
 ﻿{
-  "SearchArticles": {
+  "Search": {
     "url": "action/search",
     "method": "get"
   },

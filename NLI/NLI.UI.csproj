@@ -195,9 +195,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ActionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -224,6 +223,8 @@
     <Content Include="Components\Header\Components\NavList\NavList.view.js" />
     <Content Include="Components\Header\Header.view.js" />
     <Content Include="Components\MainComponent\MainComponent.view.js" />
+    <Content Include="Components\TimeLine\Components\TimeLineItem.view.js" />
+    <Content Include="Components\TimeLine\TimeLine.view.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -253,6 +254,10 @@
     <Content Include="Components\Header\Header.scss" />
     <Content Include="Components\Footer\Footer.scss" />
     <Content Include="Components\MainComponent\MainComponent.scss" />
+    <Content Include="Components\Pages\HomePage\HomePage.view.js" />
+    <Content Include="Components\Pages\HomePage\HomePage.scss" />
+    <Content Include="Components\TimeLine\TimeLine.scss" />
+    <Content Include="Components\TimeLine\Components\TimeLineItem.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -302,6 +307,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Action\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -311,6 +317,16 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NLI.ApiService\NLI.ApiService.csproj">
+      <Project>{09efa42c-a39e-43fc-8dfe-e914211c7d9e}</Project>
+      <Name>NLI.ApiService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NLI.Models\NLI.Models.csproj">
+      <Project>{9ae25cea-5e7d-4883-a650-b95e7c76fba6}</Project>
+      <Name>NLI.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -330,7 +346,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49271</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49271/</IISUrl>
+          <IISUrl>http://localhost:49272/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
