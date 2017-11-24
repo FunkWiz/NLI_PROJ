@@ -267,6 +267,8 @@ input, select {
   .site-tmp-label span {
     font-size: 80%;
     color: #626262; }
+.timeline-page .site-header-arrow-back {
+  display: none; }
 body {
   background-color: #0F0062; }
   body .timeline {
