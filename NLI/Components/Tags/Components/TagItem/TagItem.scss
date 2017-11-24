@@ -1,10 +1,23 @@
 ﻿body {
 
+    background-color: transparent;
+
     .tag-list{
         display: flex;
+        overflow-x: auto;
     }
 
     .tag-item{
+        
+
+        .tag-item-title:before{
+            content:'#';
+            padding: 1px;
+
+        }
+    }
+
+    .tag-item-image{
         width: 135px;
         height: 135px;
         background: url('/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg');
@@ -15,17 +28,10 @@
         border-radius: 10px;
         flex-grow: 0;
         flex-shrink: 0;
-
-        .tag-item-title:before{
-            content:'#';
-            padding: 1px;
-
-        }
     }
 
     .poster-item{
-        width: 20%;
-        height: 135px;
+       
         background: url(/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg);
         background-repeat: no-repeat;
         background-position: center center;
@@ -35,7 +41,8 @@
         -ms-flex-wrap: wrap;
         /* flex-wrap: wrap; */
         /* justify-content: space-between; */
-        flex-grow: 1;
+        width: 20vw;
+    height: 20vh;
         margin: 10px;
     }
 
@@ -43,11 +50,12 @@
         display: flex;
         flex-wrap: wrap;
         /* flex-grow: 1; */
-        /* justify-content: space-between; */
+        justify-content: space-between; 
     }
 
     .tag-item-content-wrp{
         font-size: 26px;
         font-family: 'Arimo Regular';
+        color: #555555;
     }
 }
