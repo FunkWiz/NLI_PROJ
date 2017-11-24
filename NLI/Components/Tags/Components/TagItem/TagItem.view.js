@@ -9,8 +9,9 @@ export default class TagItem extends Component  {
         this.markup = 
             `
              <li class="tag-item" data-tag="${this.value}">
+                <div class="tag-item-image"></div>
                 <div class="tag-item-content-wrp">
-                    <label class="tag-item-title">${this.title}</label>
+                    <label class="tag-item-title">#${this.title}</label>
                 </div>
              </li>
             `

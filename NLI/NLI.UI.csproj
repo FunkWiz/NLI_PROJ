@@ -228,6 +228,7 @@
     <Content Include="Components\Header\Components\NavList\NavList.view.js" />
     <Content Include="Components\Header\Header.view.js" />
     <Content Include="Components\MainComponent\MainComponent.view.js" />
+    <Content Include="Components\PosterDetails\PosterDetails.view.js" />
     <Content Include="Components\Tags\Components\PosterItem\PosterItem.view.js" />
     <Content Include="Components\Tags\Components\TagItem\TagItem.view.js" />
     <Content Include="Components\Tags\Components\PosterList\PosterList.view.js" />
@@ -291,6 +292,7 @@
     <Content Include="Components\Tags\Components\TagList\TagList.scss" />
     <Content Include="Components\Tags\Components\PosterItem\PosterItem.scss" />
     <Content Include="Components\Tags\Components\PosterList\PosterList.scss" />
+    <Content Include="Components\PosterDetails\PosterDetails.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
