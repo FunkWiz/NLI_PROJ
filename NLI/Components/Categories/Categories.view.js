@@ -1,11 +1,11 @@
 ﻿import './Categories.scss'
 import Component from '../Abstracts/Component/Component'
 import CategoryList from './Components/CategoryList/CategoryList.view'
-import categories from '../../Api/categories.json';
 
 export default class Categories extends Component  {
-	constructor() {
-		super();
+	constructor(props) {
+	    super();
+
 		this.markup = 
             `
              <div class="categories">
@@ -19,7 +19,7 @@ export default class Categories extends Component  {
                             <li class="categories-decade-line-item" data-decade="1960"></li>
                         </ul>
                     </div>
-                    <div class="categories-content-wrp">${new CategoryList({items: categories.items}).getHtml()}</div>
+                    <div class="categories-content-wrp">${new CategoryList({items: props.items, decade: props.decade}).getHtml()}</div>
                 </div>
              </div>
             `

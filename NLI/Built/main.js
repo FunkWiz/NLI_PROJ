@@ -674,6 +674,8 @@ class NavList extends __WEBPACK_IMPORTED_MODULE_0__Abstracts_Component_Component
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__TimeLine_TimeLine_view__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Categories_Categories_view__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Tags_Tags_view__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Api_categories_json__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Api_categories_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__Api_categories_json__);
 
 
 
@@ -693,10 +695,34 @@ class HomePage extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Componen
 		//    },
 		//}).then(console.log)
 		this.markup = `
-             <article class="site-page home-page">
-                ${new __WEBPACK_IMPORTED_MODULE_5__Tags_Tags_view__["a" /* default */]().getHtml()}
-             </article>
+             <article class="site-page home-page"></article>
             `;
+
+		const _printTimeLinePage = function () {
+			$('.home-page').html(new __WEBPACK_IMPORTED_MODULE_3__TimeLine_TimeLine_view__["a" /* default */]().getHtml());
+			$('.timeline-item').off().on('click', function () {
+				_printCategoriesPage({
+					items: __WEBPACK_IMPORTED_MODULE_6__Api_categories_json___default.a.items,
+					decade: $(this).data('decade')
+				});
+			});
+		};
+		const _printCategoriesPage = function (data) {
+			$('.home-page').html(new __WEBPACK_IMPORTED_MODULE_4__Categories_Categories_view__["a" /* default */](data).getHtml());
+			$('.category-item').off().on('click', function () {
+				$(this).addClass('selected').siblings().removeClass('selected');
+			});
+		};
+		const _printTagsPage = function (data) {
+			$('.home-page').html(new __WEBPACK_IMPORTED_MODULE_5__Tags_Tags_view__["a" /* default */](data).getHtml());
+		};
+		const _printPosterPage = function (data) {
+			$('.home-page').html(new PosterDetails(data).getHtml());
+		};
+
+		this.onLoad(function () {
+			_printTimeLinePage();
+		});
 	}
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = HomePage;
@@ -720,7 +746,7 @@ class TimeLineItem extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Comp
 		this.value = props.value;
 
 		this.markup = `
-             <div class="timeline-item" data-value="${this.value}">
+             <div class="timeline-item" data-decade="${this.value}">
                 <h2 class="timeline-item-title">${this.title}</h2>
                 <h4 class="timeline-item-count">${this.count}</h4>
              </div>
@@ -754,7 +780,7 @@ class TimeLine extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Componen
             `;
 	}
 }
-/* unused harmony export default */
+/* harmony export (immutable) */ __webpack_exports__["a"] = TimeLine;
 
 
 /***/ }),
@@ -1190,16 +1216,14 @@ class TimeLineList extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Comp
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Categories_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Categories_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_CategoryList_CategoryList_view__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Api_categories_json__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Api_categories_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Api_categories_json__);
-
 
 
 
 
 class Categories extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__["a" /* default */] {
-    constructor() {
+    constructor(props) {
         super();
+
         this.markup = `
              <div class="categories">
                 <div class="categories-heading">
@@ -1212,13 +1236,13 @@ class Categories extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Compon
                             <li class="categories-decade-line-item" data-decade="1960"></li>
                         </ul>
                     </div>
-                    <div class="categories-content-wrp">${new __WEBPACK_IMPORTED_MODULE_2__Components_CategoryList_CategoryList_view__["a" /* default */]({ items: __WEBPACK_IMPORTED_MODULE_3__Api_categories_json___default.a.items }).getHtml()}</div>
+                    <div class="categories-content-wrp">${new __WEBPACK_IMPORTED_MODULE_2__Components_CategoryList_CategoryList_view__["a" /* default */]({ items: props.items, decade: props.decade }).getHtml()}</div>
                 </div>
              </div>
             `;
     }
 }
-/* unused harmony export default */
+/* harmony export (immutable) */ __webpack_exports__["a"] = Categories;
 
 
 /***/ }),
@@ -1237,8 +1261,13 @@ class Categories extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Compon
 class CategoryList extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__["a" /* default */] {
 	constructor(props) {
 		super();
-		this.items = props.items;
-		this.markup = `<ul class="category-list">${this.items.map(i => new __WEBPACK_IMPORTED_MODULE_2__CategoryItem_CategoryItem_view__["a" /* default */](i).getHtml()).join('')}</ul>`;
+		const statistics = {
+			politics: props.items.find(c => c.value == 'politics').analytics[props.decade],
+			culture: props.items.find(c => c.value == 'culture').analytics[props.decade],
+			music: props.items.find(c => c.value == 'music').analytics[props.decade],
+			sport: props.items.find(c => c.value == 'sport').analytics[props.decade]
+		};
+		this.markup = `<ul class="category-list">${props.items.map(i => new __WEBPACK_IMPORTED_MODULE_2__CategoryItem_CategoryItem_view__["a" /* default */](Object.assign(i, { analytics: statistics[i.value] })).getHtml()).join('')}</ul>`;
 	}
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = CategoryList;
@@ -1278,10 +1307,12 @@ class CategoryItem extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Comp
     super();
     this.title = props.title;
     this.value = props.value;
+    this.analytics = props.analytics;
     this.markup = `
              <li class="category-item" data-category="${this.value}">
                 <div class="category-item-content-wrp">
                     <label class="category-item-title">${this.title}</label>
+                    <label class="category-item-subtitle">${this.analytics.count}</label>
                 </div>
              </li>
             `;
