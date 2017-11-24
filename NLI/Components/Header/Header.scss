@@ -1,9 +1,42 @@
 ﻿@import '../../Assets/Css/variables.scss';
 
 .site-header {
-
+    background-color: #2475FA;
+    font-size: 34px;
+    font-family: 'Arimo Regular';
+    font-weight: bold;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        position: relative;
+        margin-bottom: 3rem;
 }
 
 .site-navigation {
     text-align: left;
+}
+
+.site-header-arrow-back{
+    position: absolute;
+}
+.site-header-arrow-back{
+    position: absolute;
+    left:20px;
+    top:36px;
+    background-color: red;
+    height: 25px;
+    width: 25px;
+}
+
+.site-header-arrow-back{
+    background: url('/Content/icons/arrow@3x.png');
+    background-repeat: no-repeat;
+        background-position: center center;
+        -moz-background-size: cover;
+        background-size: contain;
+
+        &:hover{
+            cursor: pointer;
+        }
 }
