@@ -1419,8 +1419,9 @@ class Tags extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__[
     this.markup = `
              <div class="tags">
                 <div class="tags-heading">${new __WEBPACK_IMPORTED_MODULE_3__Components_TagList_TagList_view__["a" /* default */]({ items: __WEBPACK_IMPORTED_MODULE_2__Api_tags_json___default.a.items }).getHtml()}</div>
+                
                 <h2 class="tag-main-title-wrp">
-                  <span class="tag-main-title">#ג'אז</span>
+                  <span class="tag-main-title">#ג'אז</span><br>
                   <span class="tag-main-title-count">353</span>
                 </h2>
                 <div class="tags-content-wrp">${new __WEBPACK_IMPORTED_MODULE_4__Components_PosterList_PosterList_view__["a" /* default */]({ items: [{}, {}, {}, {}, {}, {}, {}, {}, {}] }).getHtml()}</div>
