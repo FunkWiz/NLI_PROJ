@@ -275,8 +275,7 @@ body {
   body .timeline-item:hover {
     cursor: pointer; }
   body .timeline-item {
-    background: -moz-linear-gradient(bottom, rgba(108, 138, 255, 0.6), rgba(153, 114, 255, 0.6)), url("/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg");
-    background: linear-gradient(0deg, rgba(108, 138, 255, 0.6), rgba(153, 114, 255, 0.6)), url("/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg");
+    background: url("/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     -moz-background-size: cover;
@@ -284,33 +283,32 @@ body {
     margin: 1rem;
     -moz-border-radius: 5px;
          border-radius: 5px;
-    padding: 5rem; }
+    padding: 5rem;
+    color: #2475FA;
+    z-index: 20;
+    position: relative; }
     body .timeline-item .timeline-item-title {
       font-size: 60px;
       margin: 1rem;
-      font-family: 'Helvetica Neue'; }
+      font-family: 'Helvetica Neue';
+      z-index: 60;
+      position: relative; }
     body .timeline-item .timeline-item-count {
       font-size: 30px;
       margin: 1rem;
-      font-family: 'Rubik'; }
-  body .timeline-item:nth-child(1) {
-    background: -moz-linear-gradient(bottom, rgba(153, 114, 255, 0.9)), rgba(108, 138, 255, 0.9), url("/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg");
-    background: linear-gradient(0deg, rgba(153, 114, 255, 0.9)), rgba(108, 138, 255, 0.9), url("/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg"); }
-  body .timeline-item:nth-child(2) {
-    background: -moz-linear-gradient(bottom, rgba(108, 138, 255, 0.6), rgba(153, 114, 255, 0.6)), url("/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg");
-    background: linear-gradient(0deg, rgba(108, 138, 255, 0.6), rgba(153, 114, 255, 0.6)), url("/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg"); }
-  body .timeline-item:nth-child(3) {
-    background: -moz-linear-gradient(bottom, rgba(108, 138, 255, 0.6), rgba(153, 114, 255, 0.6)), url("/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg");
-    background: linear-gradient(0deg, rgba(108, 138, 255, 0.6), rgba(153, 114, 255, 0.6)), url("/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg"); }
-  body .timeline-item:nth-child(4) {
-    background: -moz-linear-gradient(bottom, rgba(108, 138, 255, 0.6), rgba(153, 114, 255, 0.6)), url("/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg");
-    background: linear-gradient(0deg, rgba(108, 138, 255, 0.6), rgba(153, 114, 255, 0.6)), url("/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg"); }
-  body .timeline-item:nth-child(5) {
-    background: -moz-linear-gradient(bottom, rgba(108, 138, 255, 0.6), rgba(153, 114, 255, 0.6)), url("/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg");
-    background: linear-gradient(0deg, rgba(108, 138, 255, 0.6), rgba(153, 114, 255, 0.6)), url("/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg"); }
-  body .timeline-item:nth-child(6) {
-    background: -moz-linear-gradient(bottom, rgba(108, 138, 255, 0.6), rgba(153, 114, 255, 0.6)), url("/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg");
-    background: linear-gradient(0deg, rgba(108, 138, 255, 0.6), rgba(153, 114, 255, 0.6)), url("/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg"); }
+      font-family: 'Rubik';
+      z-index: 60;
+      position: relative; }
+    body .timeline-item:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      background: #fff;
+      opacity: 0.9; }
 .categories-decade-info-wrp {
   margin-bottom: -4rem; }
 
@@ -483,6 +481,9 @@ body .tag-main-title-count {
   font-family: 'Arimo Regular'; }
 body {
   background-color: transparent; }
+  body .app-wrap {
+    max-width: 628px;
+    margin: 0 auto; }
   body .tag-list {
     display: -webkit-box;
     display: -webkit-flex;
@@ -528,13 +529,14 @@ body {
     background-position: center center;
     -moz-background-size: cover;
     background-size: cover;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    /* flex-wrap: wrap; */
-    /* justify-content: space-between; */
-    width: 20vw;
-    height: 135px;
-    margin: 10px; }
+    /*
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+         flex-wrap: wrap; 
+         justify-content: space-between;*/
+    margin: 10px;
+    width: 135px;
+    height: 135px; }
     body .poster-item:hover {
       cursor: pointer; }
   body .poster-list {
