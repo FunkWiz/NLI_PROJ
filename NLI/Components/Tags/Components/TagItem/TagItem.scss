@@ -55,14 +55,15 @@
         background-position: center center;
         -moz-background-size: cover;
         background-size: cover;
+        display: inline-block;
         /*
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
          flex-wrap: wrap; 
          justify-content: space-between;*/
         margin: 10px;
-        width: 135px;
-    height: 135px;
+        width: 133px;
+    height: 133px;
 
         &:hover{
             cursor:pointer;
@@ -70,10 +71,7 @@
     }
 
     .poster-list{
-        display: flex;
-        flex-wrap: wrap;
-        /* flex-grow: 1; */
-        justify-content: space-between; 
+        
     }
 
     .tag-item-content-wrp{
