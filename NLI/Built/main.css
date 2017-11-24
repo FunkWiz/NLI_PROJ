@@ -323,6 +323,16 @@ body {
 
 .categories-content-wrp {
   background-color: white; }
+
+.category-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
 .categories-content-wrp {
   display: -webkit-box;
   display: -webkit-flex;
