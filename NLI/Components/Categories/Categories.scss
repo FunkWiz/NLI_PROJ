@@ -33,3 +33,19 @@
         box-sizing: border-box;
     }
 
+    .continue-btn{
+        font-family:'Arimo Regular';
+            background-color: #3369E4;
+ 
+    width: 30%;
+    color: white;
+    border-radius: 61px;
+    font-size: 30px;
+    padding: 3rem;
+    margin: 4rem;
+
+    &:hover{
+        cursor:pointer;
+    }
+    }
+

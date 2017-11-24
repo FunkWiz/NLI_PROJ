@@ -341,6 +341,19 @@ body {
 .category-item {
   -moz-box-sizing: border-box;
        box-sizing: border-box; }
+
+.continue-btn {
+  font-family: 'Arimo Regular';
+  background-color: #3369E4;
+  width: 30%;
+  color: white;
+  -moz-border-radius: 61px;
+       border-radius: 61px;
+  font-size: 30px;
+  padding: 3rem;
+  margin: 4rem; }
+  .continue-btn:hover {
+    cursor: pointer; }
 .categories-content-wrp {
   display: -webkit-box;
   display: -webkit-flex;
