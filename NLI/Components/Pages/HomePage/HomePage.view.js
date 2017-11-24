@@ -57,6 +57,9 @@ export default class HomePage extends Component  {
 		    $('#root').attr('class', 'tags-page');
 		    $('.home-page').html(new Tags(data).getHtml());
 		    $(window).scrollTop(0);
+		    $('.tag-item').on('click', function(){
+		        $('.tag-main-title').html($(this).data('tag'));
+		    }).first().trigger('click');
             
 		}
 		const _printPosterPage = function(data){

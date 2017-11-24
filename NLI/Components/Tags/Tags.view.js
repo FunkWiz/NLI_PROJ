@@ -12,14 +12,13 @@ export default class Tags extends Component  {
 	    const decade = decades.items.find(d => d.value == props.decade).title;
 	    const category = categories.items.find(c => c.value == props.category).title;
 	    $('.site-header-title').html(`${category} ${decade}`);
-		this.markup = 
+	    this.markup = 
             `
              <div class="tags">
                 <div class="tags-heading">${new TagList({items: tags.items}).getHtml()}</div>
-                
                 <h2 class="tag-main-title-wrp">
-                  <span class="tag-main-title">#ג'אז</span><br>
-                  <span class="tag-main-title-count">353</span>
+                  <span class="tag-main-title"></span><br>
+                  <span class="tag-main-title-count">8</span>
                 </h2>
                 <div class="tags-content-wrp">${new PosterList({items: [{},{},{},{},{},{},{},{},{}]}).getHtml()}</div>
              </div>
