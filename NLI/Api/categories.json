@@ -32,25 +32,25 @@
       "value": "politics",
       "analytics": {
         "1940": {
-          "count": 16
+          "count": 19
         },
         "1950": {
-          "count": 3
+          "count": 7
         },
         "1960": {
-          "count": 1
+          "count":3
         },
         "1970": {
           "count": 2
         },
         "1980": {
-          "count": 0
+          "count": 12
         },
         "1990": {
           "count": 0
         },
         "2000": {
-          "count": 0
+          "count": 1
         }
       }
     },
@@ -59,13 +59,13 @@
       "value": "culture",
       "analytics": {
         "1940": {
-          "count": 16
+          "count": 163
         },
         "1950": {
-          "count": 3
+          "count": 235
         },
         "1960": {
-          "count": 1
+          "count": 2
         },
         "1970": {
           "count": 2
@@ -74,7 +74,7 @@
           "count": 0
         },
         "1990": {
-          "count": 0
+          "count": 2
         },
         "2000": {
           "count": 0
@@ -86,7 +86,7 @@
       "value": "sport",
       "analytics": {
         "1940": {
-          "count": 16
+          "count": 12
         },
         "1950": {
           "count": 3

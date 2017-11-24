@@ -4,7 +4,7 @@ import ApiService from '../../../Services/ApiService'
 import TimeLine from '../../TimeLine/TimeLine.view'
 import Categories from '../../Categories/Categories.view'
 import Tags from '../../Tags/Tags.view'
-import categories from '../../../Api/categories.json'
+
 export default class HomePage extends Component  {
 	constructor() {
 		super();
@@ -25,7 +25,6 @@ export default class HomePage extends Component  {
 		    $('.home-page').html(new TimeLine().getHtml());
 		    $('.timeline-item').off().on('click', function(){
 		        _printCategoriesPage({
-		            items:  categories.items,
 		            decade: $(this).data('decade')
 		        });
 		    });

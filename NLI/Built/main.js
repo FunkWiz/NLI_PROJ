@@ -674,8 +674,6 @@ class NavList extends __WEBPACK_IMPORTED_MODULE_0__Abstracts_Component_Component
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__TimeLine_TimeLine_view__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Categories_Categories_view__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Tags_Tags_view__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Api_categories_json__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Api_categories_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__Api_categories_json__);
 
 
 
@@ -702,7 +700,6 @@ class HomePage extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Componen
 			$('.home-page').html(new __WEBPACK_IMPORTED_MODULE_3__TimeLine_TimeLine_view__["a" /* default */]().getHtml());
 			$('.timeline-item').off().on('click', function () {
 				_printCategoriesPage({
-					items: __WEBPACK_IMPORTED_MODULE_6__Api_categories_json___default.a.items,
 					decade: $(this).data('decade')
 				});
 			});
@@ -1216,31 +1213,38 @@ class TimeLineList extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Comp
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Categories_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Categories_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_CategoryList_CategoryList_view__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Api_categories_json__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Api_categories_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Api_categories_json__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Api_decades_json__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Api_decades_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__Api_decades_json__);
+
+
 
 
 
 
 class Categories extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__["a" /* default */] {
-    constructor(props) {
-        super();
+  constructor(props) {
+    super();
+    const _decade = __WEBPACK_IMPORTED_MODULE_4__Api_decades_json___default.a.items.find(d => d.value == props.decade);
+    const decadeSum = __WEBPACK_IMPORTED_MODULE_3__Api_categories_json___default.a.items.map(c => c.analytics[props.decade].count).reduce(function (a, b) {
+      return a + b;
+    });
 
-        this.markup = `
+    this.markup = `
              <div class="categories">
                 <div class="categories-heading">
                     <div class="categories-decade-info-wrp">
                         <div class="categories-decade-info">
-                            <h4 class="categories-decade-title">40s</h4>
-                            <h4 class="categories-decade-count">433</h4>
+                            <h4 class="categories-decade-title">${_decade.title}</h4>
+                            <h4 class="categories-decade-count">${decadeSum}</h4>
                         </div>
-                        <ul class="categories-decade-line-list">
-                            <li class="categories-decade-line-item" data-decade="1960"></li>
-                        </ul>
                     </div>
-                    <div class="categories-content-wrp">${new __WEBPACK_IMPORTED_MODULE_2__Components_CategoryList_CategoryList_view__["a" /* default */]({ items: props.items, decade: props.decade }).getHtml()}</div>
+                    <div class="categories-content-wrp">${new __WEBPACK_IMPORTED_MODULE_2__Components_CategoryList_CategoryList_view__["a" /* default */]({ items: __WEBPACK_IMPORTED_MODULE_3__Api_categories_json___default.a.items, decade: props.decade }).getHtml()}</div>
                 </div>
              </div>
             `;
-    }
+  }
 }
 /* harmony export (immutable) */ __webpack_exports__["a"] = Categories;
 
@@ -1277,7 +1281,7 @@ class CategoryList extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Comp
 /* 37 */
 /***/ (function(module, exports) {
 
-module.exports = { "items": [{ "title": "מוסיקה", "value": "music", "analytics": { "1940": { "count": 16 }, "1950": { "count": 3 }, "1960": { "count": 1 }, "1970": { "count": 2 }, "1980": { "count": 0 }, "1990": { "count": 0 }, "2000": { "count": 0 } } }, { "title": "פוליטיקה", "value": "politics", "analytics": { "1940": { "count": 16 }, "1950": { "count": 3 }, "1960": { "count": 1 }, "1970": { "count": 2 }, "1980": { "count": 0 }, "1990": { "count": 0 }, "2000": { "count": 0 } } }, { "title": "תרבות", "value": "culture", "analytics": { "1940": { "count": 16 }, "1950": { "count": 3 }, "1960": { "count": 1 }, "1970": { "count": 2 }, "1980": { "count": 0 }, "1990": { "count": 0 }, "2000": { "count": 0 } } }, { "title": "ספורט", "value": "sport", "analytics": { "1940": { "count": 16 }, "1950": { "count": 3 }, "1960": { "count": 1 }, "1970": { "count": 2 }, "1980": { "count": 0 }, "1990": { "count": 0 }, "2000": { "count": 0 } } }] };
+module.exports = { "items": [{ "title": "מוסיקה", "value": "music", "analytics": { "1940": { "count": 16 }, "1950": { "count": 3 }, "1960": { "count": 1 }, "1970": { "count": 2 }, "1980": { "count": 0 }, "1990": { "count": 0 }, "2000": { "count": 0 } } }, { "title": "פוליטיקה", "value": "politics", "analytics": { "1940": { "count": 19 }, "1950": { "count": 7 }, "1960": { "count": 3 }, "1970": { "count": 2 }, "1980": { "count": 12 }, "1990": { "count": 0 }, "2000": { "count": 1 } } }, { "title": "תרבות", "value": "culture", "analytics": { "1940": { "count": 163 }, "1950": { "count": 235 }, "1960": { "count": 2 }, "1970": { "count": 2 }, "1980": { "count": 0 }, "1990": { "count": 2 }, "2000": { "count": 0 } } }, { "title": "ספורט", "value": "sport", "analytics": { "1940": { "count": 12 }, "1950": { "count": 3 }, "1960": { "count": 1 }, "1970": { "count": 2 }, "1980": { "count": 0 }, "1990": { "count": 0 }, "2000": { "count": 0 } } }] };
 
 /***/ }),
 /* 38 */
@@ -1477,7 +1481,7 @@ class TagItem extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component
              <li class="tag-item" data-tag="${this.value}">
                 <div class="tag-item-image"></div>
                 <div class="tag-item-content-wrp">
-                    <label class="tag-item-title">#${this.title}</label>
+                    <label class="tag-item-title">${this.title}</label>
                 </div>
              </li>
             `;
