@@ -281,8 +281,6 @@ body {
     -moz-background-size: cover;
          background-size: cover;
     margin: 1rem;
-    -moz-border-radius: 5px;
-         border-radius: 5px;
     padding: 5rem;
     color: #2475FA;
     z-index: 20;
@@ -308,7 +306,9 @@ body {
       top: 0;
       margin: auto;
       background: #fff;
-      opacity: 0.9; }
+      opacity: 0.9;
+      -moz-border-radius: 5px;
+           border-radius: 5px; }
 .categories-decade-info-wrp {
   margin-bottom: -4rem; }
 
@@ -442,6 +442,9 @@ body .categories-decade-count {
 body #root {
   background-color: white;
   min-width: 0 !important; }
+
+body .timeline-page {
+  background-color: #2475FA !important; }
 
 body .tag-main-title-wrp {
   color: #2475FA;
