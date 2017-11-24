@@ -732,6 +732,9 @@ class HomePage extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Componen
 			$('#root').attr('class', 'tags-page');
 			$('.home-page').html(new __WEBPACK_IMPORTED_MODULE_5__Tags_Tags_view__["a" /* default */](data).getHtml());
 			$(window).scrollTop(0);
+			$('.tag-item').on('click', function () {
+				$('.tag-main-title').html($(this).data('tag'));
+			}).first().trigger('click');
 		};
 		const _printPosterPage = function (data) {
 			$('#root').attr('class', 'poster-page');
@@ -1488,10 +1491,9 @@ class Tags extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__[
     this.markup = `
              <div class="tags">
                 <div class="tags-heading">${new __WEBPACK_IMPORTED_MODULE_3__Components_TagList_TagList_view__["a" /* default */]({ items: __WEBPACK_IMPORTED_MODULE_2__Api_tags_json___default.a.items }).getHtml()}</div>
-                
                 <h2 class="tag-main-title-wrp">
-                  <span class="tag-main-title">#ג'אז</span><br>
-                  <span class="tag-main-title-count">353</span>
+                  <span class="tag-main-title"></span><br>
+                  <span class="tag-main-title-count">8</span>
                 </h2>
                 <div class="tags-content-wrp">${new __WEBPACK_IMPORTED_MODULE_4__Components_PosterList_PosterList_view__["a" /* default */]({ items: [{}, {}, {}, {}, {}, {}, {}, {}, {}] }).getHtml()}</div>
              </div>
