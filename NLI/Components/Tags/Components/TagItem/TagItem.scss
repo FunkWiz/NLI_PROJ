@@ -1,2 +1,53 @@
 ﻿body {
+
+    .tag-list{
+        display: flex;
+    }
+
+    .tag-item{
+        width: 135px;
+        height: 135px;
+        background: url('/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        margin: 13px;
+        border-radius: 10px;
+        flex-grow: 0;
+        flex-shrink: 0;
+
+        .tag-item-title:before{
+            content:'#';
+            padding: 1px;
+
+        }
+    }
+
+    .poster-item{
+        width: 20%;
+        height: 135px;
+        background: url(/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        -moz-background-size: cover;
+        background-size: cover;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        /* flex-wrap: wrap; */
+        /* justify-content: space-between; */
+        flex-grow: 1;
+        margin: 10px;
+    }
+
+    .poster-list{
+        display: flex;
+        flex-wrap: wrap;
+        /* flex-grow: 1; */
+        /* justify-content: space-between; */
+    }
+
+    .tag-item-content-wrp{
+        font-size: 26px;
+        font-family: 'Arimo Regular';
+    }
 }

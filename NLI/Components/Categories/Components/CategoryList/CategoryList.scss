@@ -1,2 +1,60 @@
-﻿body {
+﻿.categories-content-wrp{
+    
+    display: flex;
+    flex-wrap: wrap;
+ 
 }
+
+.category-item{
+    position: relative;
+    background: url('/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color:#2475FA;
+     font-weight: bold;
+    list-style: none;
+    font-size: 40px;
+    font-family: 'Arimo Regular';
+    flex-grow: 1;
+    width: 50%;
+    border-radius: 5px;
+    width: 45%;
+    
+    background-color: red;
+    margin: 1rem;
+    height:250px;
+    z-index: 5;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #878787;
+     border-radius: 15px;
+     box-shadow: 0px 3px 6px #000000;
+    
+    &:hover{
+        cursor: pointer;
+    }
+
+    &:after{
+        content:'';
+        position: absolute;
+        left:0;
+        right:0;
+        bottom:0;
+        top:0;
+        margin: auto;
+        background: #fff;
+        opacity:0.95;
+        border-radius: 15px;
+    }
+}
+
+.category-item-title:hover{
+    cursor: pointer;
+}
+
+.category-item-content-wrp{
+    z-index: 20;
+}
+
