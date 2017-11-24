@@ -23,6 +23,7 @@ export default class Categories extends Component  {
                     <div class="categories-content-wrp">${new CategoryList({items: categories.items, decade: props.decade}).getHtml()}</div>
                 </div>
              </div>
+             <button class="btn continue-btn">המשך</button>
             `
 	}
 }

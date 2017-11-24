@@ -1,6 +1,6 @@
-﻿import './Categories.scss'
+﻿import './PosterDetails.scss'
 import Component from '../Abstracts/Component/Component'
-import PosterDetails from './Components/CategoryList/CategoryList.view'
+
 
 export default class PosterDetails extends Component  {
 	constructor() {
@@ -12,6 +12,7 @@ export default class PosterDetails extends Component  {
                     <div class="poster-details-image"></div>
                 </div>
                 <div class="poster-details-content-wrp">
+                <hr>
                     <div class="poster-details-info">
                         <h4 class="poster-details-info-title">מידע על הכרזה</h4>
                         <div>

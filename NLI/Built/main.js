@@ -145,7 +145,7 @@ class ScrollActions {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Abstracts_Component_Component__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Footer_scss__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Footer_scss__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Footer_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Footer_scss__);
 
 
@@ -167,7 +167,7 @@ class Footer extends __WEBPACK_IMPORTED_MODULE_0__Abstracts_Component_Component_
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Abstracts_Component_Component__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Header_scss__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Header_scss__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Header_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Header_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_NavList_NavList_view__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Services_UrlService__ = __webpack_require__(1);
@@ -441,7 +441,7 @@ class Useful {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__MainComponent_scss__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__MainComponent_scss__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__MainComponent_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__MainComponent_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Header_Header_view__ = __webpack_require__(5);
@@ -613,9 +613,9 @@ function scrollToY(scrollTargetY, speed, easing) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Abstracts_Component_Component__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__NavList_scss__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__NavList_scss__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__NavList_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__NavList_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_json__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_json__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__pages_json__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Services_UrlService__ = __webpack_require__(1);
 
@@ -667,13 +667,15 @@ class NavList extends __WEBPACK_IMPORTED_MODULE_0__Abstracts_Component_Component
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__HomePage_scss__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__HomePage_scss__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__HomePage_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__HomePage_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Services_ApiService__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__TimeLine_TimeLine_view__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Services_ApiService__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__TimeLine_TimeLine_view__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Categories_Categories_view__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Tags_Tags_view__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__PosterDetails_PosterDetails_view__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Tags_Tags_view__ = __webpack_require__(46);
+
 
 
 
@@ -697,7 +699,8 @@ class HomePage extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Componen
             `;
 
 		const _printTimeLinePage = function () {
-			$('.home-page').html(new __WEBPACK_IMPORTED_MODULE_3__TimeLine_TimeLine_view__["a" /* default */]().getHtml());
+			//$('.home-page').html(new TimeLine().getHtml());
+			$('.home-page').html(new __WEBPACK_IMPORTED_MODULE_5__PosterDetails_PosterDetails_view__["a" /* default */]().getHtml());
 			$('.timeline-item').off().on('click', function () {
 				_printCategoriesPage({
 					decade: $(this).data('decade')
@@ -711,10 +714,10 @@ class HomePage extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Componen
 			});
 		};
 		const _printTagsPage = function (data) {
-			$('.home-page').html(new __WEBPACK_IMPORTED_MODULE_5__Tags_Tags_view__["a" /* default */](data).getHtml());
+			$('.home-page').html(new __WEBPACK_IMPORTED_MODULE_6__Tags_Tags_view__["a" /* default */](data).getHtml());
 		};
 		const _printPosterPage = function (data) {
-			$('.home-page').html(new PosterDetails(data).getHtml());
+			$('.home-page').html(new __WEBPACK_IMPORTED_MODULE_5__PosterDetails_PosterDetails_view__["a" /* default */](data).getHtml());
 		};
 
 		this.onLoad(function () {
@@ -730,7 +733,7 @@ class HomePage extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Componen
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TimeLineItem_scss__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TimeLineItem_scss__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TimeLineItem_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__TimeLineItem_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
 
@@ -758,11 +761,35 @@ class TimeLineItem extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Comp
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TimeLine_scss__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TimeLineList_scss__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TimeLineList_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__TimeLineList_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__TimeLineItem_TimeLineItem_view__ = __webpack_require__(16);
+
+
+
+
+class TimeLineList extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__["a" /* default */] {
+	constructor(props) {
+		super();
+		this.items = props.items;
+
+		this.markup = `<ul class="timeline-list">${this.items.map(i => new __WEBPACK_IMPORTED_MODULE_2__TimeLineItem_TimeLineItem_view__["a" /* default */](i).getHtml()).join('')}</ul>`;
+	}
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = TimeLineList;
+
+
+/***/ }),
+/* 18 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TimeLine_scss__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TimeLine_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__TimeLine_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_TimeLineList_TimeLineList_view__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Api_decades_json__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_TimeLineList_TimeLineList_view__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Api_decades_json__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Api_decades_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Api_decades_json__);
 
 
@@ -777,17 +804,17 @@ class TimeLine extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Componen
             `;
 	}
 }
-/* harmony export (immutable) */ __webpack_exports__["a"] = TimeLine;
+/* unused harmony export default */
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Api_urls_json__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Api_urls_json__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Api_urls_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Api_urls_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_query_string__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_query_string__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_query_string___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_query_string__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Services_UrlService__ = __webpack_require__(1);
 
@@ -812,19 +839,25 @@ class ApiService {
 
 
 /***/ }),
-/* 19 */
+/* 20 */
+/***/ (function(module, exports) {
+
+module.exports = { "items": [{ "title": "40s", "count": "2272", "value": "1940" }, { "title": "50s", "count": "1429", "value": "1950" }, { "title": "60s", "count": "1079", "value": "1960" }, { "title": "70s", "count": "1265", "value": "1970" }, { "title": "80s", "count": "989", "value": "1980" }, { "title": "90s", "count": "453", "value": "1990" }, { "title": "2000s", "count": "133", "value": "2000" }] };
+
+/***/ }),
+/* 21 */
 /***/ (function(module, exports) {
 
 module.exports = { "Search": { "url": "action/search", "method": "get" }, "Browse": { "url": "action/browse", "method": "get" }, "RecentPapers": { "url": "action/toprecent", "method": "get" }, "Chart": { "url": "action/chart", "method": "get" }, "GetImage": { "url": "action/image", "method": "get" } };
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, exports) {
 
 module.exports = { "items": [{ "id": 1, "title": "דף הבית", "href": "home/index", "classAlias": "home" }, { "id": 2, "title": "חיפוש מתקדם", "href": "home/search", "classAlias": "search" }, { "id": 3, "title": "דפדוף", "href": "home/archive", "classAlias": "archive" }, { "id": 4, "title": "הכתבות שלי", "href": "home/articles", "classAlias": "articles" }, { "id": 5, "title": "כלי עזר", "href": "#", "classAlias": "tools", "links": [{ "title": "תמונות דיגיטליות", "href": "http://yedfotoweb7/fotoweb/loginhidden.fwx" }, { "title": "מילון רב-מילים", "href": "http://www.ravmilim.co.il/" }] }] };
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -920,14 +953,14 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 };
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var strictUriEncode = __webpack_require__(23);
-var objectAssign = __webpack_require__(21);
+var strictUriEncode = __webpack_require__(25);
+var objectAssign = __webpack_require__(23);
 
 function encoderForArrayFormat(opts) {
 	switch (opts.arrayFormat) {
@@ -1113,7 +1146,7 @@ exports.stringify = function (obj, opts) {
 };
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1124,18 +1157,6 @@ module.exports = function (str) {
 		return '%' + c.charCodeAt(0).toString(16).toUpperCase();
 	});
 };
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 26 */
@@ -1168,54 +1189,36 @@ module.exports = function (str) {
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 31 */,
-/* 32 */
-/***/ (function(module, exports) {
-
-module.exports = { "items": [{ "title": "40s", "count": "2272", "value": "1940" }, { "title": "50s", "count": "1429", "value": "1950" }, { "title": "60s", "count": "1079", "value": "1960" }, { "title": "70s", "count": "1265", "value": "1970" }, { "title": "80s", "count": "989", "value": "1980" }, { "title": "90s", "count": "453", "value": "1990" }, { "title": "2000s", "count": "133", "value": "2000" }] };
-
-/***/ }),
-/* 33 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TimeLineList_scss__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TimeLineList_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__TimeLineList_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__TimeLineItem_TimeLineItem_view__ = __webpack_require__(16);
-
-
-
-
-class TimeLineList extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__["a" /* default */] {
-	constructor(props) {
-		super();
-		this.items = props.items;
-
-		this.markup = `<ul class="timeline-list">${this.items.map(i => new __WEBPACK_IMPORTED_MODULE_2__TimeLineItem_TimeLineItem_view__["a" /* default */](i).getHtml()).join('')}</ul>`;
-	}
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = TimeLineList;
-
-
-/***/ }),
-/* 34 */
+/* 31 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
+/* 32 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 34 */,
 /* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Categories_scss__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Categories_scss__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Categories_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Categories_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_CategoryList_CategoryList_view__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Api_categories_json__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_CategoryList_CategoryList_view__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Api_categories_json__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Api_categories_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Api_categories_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Api_decades_json__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Api_decades_json__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Api_decades_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__Api_decades_json__);
 
 
@@ -1243,6 +1246,7 @@ class Categories extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Compon
                     <div class="categories-content-wrp">${new __WEBPACK_IMPORTED_MODULE_2__Components_CategoryList_CategoryList_view__["a" /* default */]({ items: __WEBPACK_IMPORTED_MODULE_3__Api_categories_json___default.a.items, decade: props.decade }).getHtml()}</div>
                 </div>
              </div>
+             <button class="btn continue-btn">המשך</button>
             `;
   }
 }
@@ -1254,53 +1258,7 @@ class Categories extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Compon
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CategoryList_scss__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CategoryList_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__CategoryList_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__CategoryItem_CategoryItem_view__ = __webpack_require__(40);
-
-
-
-
-class CategoryList extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__["a" /* default */] {
-	constructor(props) {
-		super();
-		const statistics = {
-			politics: props.items.find(c => c.value == 'politics').analytics[props.decade],
-			culture: props.items.find(c => c.value == 'culture').analytics[props.decade],
-			music: props.items.find(c => c.value == 'music').analytics[props.decade],
-			sport: props.items.find(c => c.value == 'sport').analytics[props.decade]
-		};
-		this.markup = `<ul class="category-list">${props.items.map(i => new __WEBPACK_IMPORTED_MODULE_2__CategoryItem_CategoryItem_view__["a" /* default */](Object.assign(i, { analytics: statistics[i.value] })).getHtml()).join('')}</ul>`;
-	}
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = CategoryList;
-
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports) {
-
-module.exports = { "items": [{ "title": "מוסיקה", "value": "music", "analytics": { "1940": { "count": 16 }, "1950": { "count": 3 }, "1960": { "count": 1 }, "1970": { "count": 2 }, "1980": { "count": 0 }, "1990": { "count": 0 }, "2000": { "count": 0 } } }, { "title": "פוליטיקה", "value": "politics", "analytics": { "1940": { "count": 19 }, "1950": { "count": 7 }, "1960": { "count": 3 }, "1970": { "count": 2 }, "1980": { "count": 12 }, "1990": { "count": 0 }, "2000": { "count": 1 } } }, { "title": "תרבות", "value": "culture", "analytics": { "1940": { "count": 163 }, "1950": { "count": 235 }, "1960": { "count": 2 }, "1970": { "count": 2 }, "1980": { "count": 0 }, "1990": { "count": 2 }, "2000": { "count": 0 } } }, { "title": "ספורט", "value": "sport", "analytics": { "1940": { "count": 12 }, "1950": { "count": 3 }, "1960": { "count": 1 }, "1970": { "count": 2 }, "1980": { "count": 0 }, "1990": { "count": 0 }, "2000": { "count": 0 } } }] };
-
-/***/ }),
-/* 38 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 39 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 40 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CategoryItem_scss__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CategoryItem_scss__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CategoryItem_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__CategoryItem_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
 
@@ -1326,6 +1284,52 @@ class CategoryItem extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Comp
 
 
 /***/ }),
+/* 37 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CategoryList_scss__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__CategoryList_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__CategoryList_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__CategoryItem_CategoryItem_view__ = __webpack_require__(36);
+
+
+
+
+class CategoryList extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__["a" /* default */] {
+	constructor(props) {
+		super();
+		const statistics = {
+			politics: props.items.find(c => c.value == 'politics').analytics[props.decade],
+			culture: props.items.find(c => c.value == 'culture').analytics[props.decade],
+			music: props.items.find(c => c.value == 'music').analytics[props.decade],
+			sport: props.items.find(c => c.value == 'sport').analytics[props.decade]
+		};
+		this.markup = `<ul class="category-list">${props.items.map(i => new __WEBPACK_IMPORTED_MODULE_2__CategoryItem_CategoryItem_view__["a" /* default */](Object.assign(i, { analytics: statistics[i.value] })).getHtml()).join('')}</ul>`;
+	}
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = CategoryList;
+
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports) {
+
+module.exports = { "items": [{ "title": "מוסיקה", "value": "music", "analytics": { "1940": { "count": 16 }, "1950": { "count": 3 }, "1960": { "count": 1 }, "1970": { "count": 2 }, "1980": { "count": 0 }, "1990": { "count": 0 }, "2000": { "count": 0 } } }, { "title": "פוליטיקה", "value": "politics", "analytics": { "1940": { "count": 19 }, "1950": { "count": 7 }, "1960": { "count": 3 }, "1970": { "count": 2 }, "1980": { "count": 12 }, "1990": { "count": 0 }, "2000": { "count": 1 } } }, { "title": "תרבות", "value": "culture", "analytics": { "1940": { "count": 163 }, "1950": { "count": 235 }, "1960": { "count": 2 }, "1970": { "count": 2 }, "1980": { "count": 0 }, "1990": { "count": 2 }, "2000": { "count": 0 } } }, { "title": "ספורט", "value": "sport", "analytics": { "1940": { "count": 12 }, "1950": { "count": 3 }, "1960": { "count": 1 }, "1970": { "count": 2 }, "1980": { "count": 0 }, "1990": { "count": 0 }, "2000": { "count": 0 } } }] };
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 41 */
 /***/ (function(module, exports) {
 
@@ -1333,100 +1337,6 @@ class CategoryItem extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Comp
 
 /***/ }),
 /* 42 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__PosterList_scss__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__PosterList_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__PosterList_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PosterItem_PosterItem_view__ = __webpack_require__(47);
-
-
-
-
-class PosterList extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__["a" /* default */] {
-	constructor(props) {
-		super();
-		this.items = props.items;
-		this.markup = `<ul class="poster-list">${this.items.map(i => new __WEBPACK_IMPORTED_MODULE_2__PosterItem_PosterItem_view__["a" /* default */](i).getHtml()).join('')}</ul>`;
-	}
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = PosterList;
-
-
-/***/ }),
-/* 43 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TagList_scss__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TagList_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__TagList_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__TagItem_TagItem_view__ = __webpack_require__(50);
-
-
-
-
-class TagList extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__["a" /* default */] {
-	constructor(props) {
-		super();
-		this.items = props.items;
-		this.markup = `<ul class="tag-list">${this.items.map(i => new __WEBPACK_IMPORTED_MODULE_2__TagItem_TagItem_view__["a" /* default */](i).getHtml()).join('')}</ul>`;
-	}
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = TagList;
-
-
-/***/ }),
-/* 44 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Tags_scss__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Tags_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Tags_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Api_tags_json__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Api_tags_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Api_tags_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_TagList_TagList_view__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Components_PosterList_PosterList_view__ = __webpack_require__(42);
-
-
-
-
-
-
-class Tags extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__["a" /* default */] {
-  constructor() {
-    super();
-    this.markup = `
-             <div class="tags">
-                <div class="tags-heading">${new __WEBPACK_IMPORTED_MODULE_3__Components_TagList_TagList_view__["a" /* default */]({ items: __WEBPACK_IMPORTED_MODULE_2__Api_tags_json___default.a.items }).getHtml()}</div>
-                <h2 class="tag-main-title-wrp">
-                  <span class="tag-main-title">#ג'אז</span>
-                  <span class="tag-main-title-count">353</span>
-                </h2>
-                <div class="tags-content-wrp">${new __WEBPACK_IMPORTED_MODULE_4__Components_PosterList_PosterList_view__["a" /* default */]({ items: [{}, {}, {}, {}, {}, {}, {}, {}, {}] }).getHtml()}</div>
-             </div>
-            `;
-  }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Tags;
-
-
-/***/ }),
-/* 45 */
-/***/ (function(module, exports) {
-
-module.exports = { "items": [{ "title": "ג'אז", "value": "ג'אז" }, { "title": "בלוז", "value": "בלוז" }, { "title": "מחול", "value": "מחול" }, { "title": "קלאסי", "value": "קלאסי" }, { "title": "ג'אז", "value": "ג'אז" }, { "title": "בלוז", "value": "בלוז" }, { "title": "מחול", "value": "מחול" }, { "title": "קלאסי", "value": "קלאסי" }] };
-
-/***/ }),
-/* 46 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1450,23 +1360,34 @@ class PosterItem extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Compon
 
 
 /***/ }),
-/* 48 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 49 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 50 */
+/* 43 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TagItem_scss__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__PosterList_scss__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__PosterList_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__PosterList_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PosterItem_PosterItem_view__ = __webpack_require__(42);
+
+
+
+
+class PosterList extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__["a" /* default */] {
+	constructor(props) {
+		super();
+		this.items = props.items;
+		this.markup = `<ul class="poster-list">${this.items.map(i => new __WEBPACK_IMPORTED_MODULE_2__PosterItem_PosterItem_view__["a" /* default */](i).getHtml()).join('')}</ul>`;
+	}
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = PosterList;
+
+
+/***/ }),
+/* 44 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TagItem_scss__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TagItem_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__TagItem_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
 
@@ -1491,6 +1412,90 @@ class TagItem extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component
 
 
 /***/ }),
+/* 45 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TagList_scss__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__TagList_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__TagList_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__TagItem_TagItem_view__ = __webpack_require__(44);
+
+
+
+
+class TagList extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__["a" /* default */] {
+	constructor(props) {
+		super();
+		this.items = props.items;
+		this.markup = `<ul class="tag-list">${this.items.map(i => new __WEBPACK_IMPORTED_MODULE_2__TagItem_TagItem_view__["a" /* default */](i).getHtml()).join('')}</ul>`;
+	}
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = TagList;
+
+
+/***/ }),
+/* 46 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Tags_scss__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Tags_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Tags_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Api_tags_json__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Api_tags_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Api_tags_json__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_TagList_TagList_view__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Components_PosterList_PosterList_view__ = __webpack_require__(43);
+
+
+
+
+
+
+class Tags extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__["a" /* default */] {
+  constructor() {
+    super();
+    this.markup = `
+             <div class="tags">
+                <div class="tags-heading">${new __WEBPACK_IMPORTED_MODULE_3__Components_TagList_TagList_view__["a" /* default */]({ items: __WEBPACK_IMPORTED_MODULE_2__Api_tags_json___default.a.items }).getHtml()}</div>
+                
+                <h2 class="tag-main-title-wrp">
+                  <span class="tag-main-title">#ג'אז</span><br>
+                  <span class="tag-main-title-count">353</span>
+                </h2>
+                <div class="tags-content-wrp">${new __WEBPACK_IMPORTED_MODULE_4__Components_PosterList_PosterList_view__["a" /* default */]({ items: [{}, {}, {}, {}, {}, {}, {}, {}, {}] }).getHtml()}</div>
+             </div>
+            `;
+  }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Tags;
+
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports) {
+
+module.exports = { "items": [{ "title": "ג'אז", "value": "ג'אז" }, { "title": "בלוז", "value": "בלוז" }, { "title": "מחול", "value": "מחול" }, { "title": "קלאסי", "value": "קלאסי" }, { "title": "ג'אז", "value": "ג'אז" }, { "title": "בלוז", "value": "בלוז" }, { "title": "מחול", "value": "מחול" }, { "title": "קלאסי", "value": "קלאסי" }] };
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 51 */
 /***/ (function(module, exports) {
 
@@ -1498,6 +1503,68 @@ class TagItem extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component
 
 /***/ }),
 /* 52 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 53 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__PosterDetails_scss__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__PosterDetails_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__PosterDetails_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__ = __webpack_require__(0);
+
+
+
+class PosterDetails extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__["a" /* default */] {
+    constructor() {
+        super();
+        this.markup = `
+             <div class="poster-details">
+                <div class="poster-details-heading">
+                    <div class="poster-details-image"></div>
+                </div>
+                <div class="poster-details-content-wrp">
+                <hr>
+                    <div class="poster-details-info">
+                        <h4 class="poster-details-info-title">מידע על הכרזה</h4>
+                        <div>
+                            <ul class="poster-details-info-list">
+                                <li class="poster-details-info-item">
+                                    <label class="poster-details-info-item-title">מוציא לאור</label>
+                                    <label class="poster-details-info-item-value">Yossi Trabeklin YoYo</label>
+                                </li>
+                                <li class="poster-details-info-item">
+                                    <label class="poster-details-info-item-title">מוציא לאור</label>
+                                    <label class="poster-details-info-item-value">Yossi Trabeklin YoYo</label>
+                                </li>
+                                <li class="poster-details-info-item">
+                                    <label class="poster-details-info-item-title">מוציא לאור</label>
+                                    <label class="poster-details-info-item-value">Yossi Trabeklin YoYo</label>
+                                </li>
+                                <li class="poster-details-info-item">
+                                    <label class="poster-details-info-item-title">מוציא לאור</label>
+                                    <label class="poster-details-info-item-value">Yossi Trabeklin YoYo</label>
+                                </li>
+                                <li class="poster-details-info-item">
+                                    <label class="poster-details-info-item-title">מוציא לאור</label>
+                                    <label class="poster-details-info-item-value">Yossi Trabeklin YoYo</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+             </div>
+            `;
+    }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = PosterDetails;
+
+
+/***/ }),
+/* 54 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

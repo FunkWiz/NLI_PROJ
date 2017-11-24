@@ -3,6 +3,7 @@ import Component from '../../Abstracts/Component/Component'
 import ApiService from '../../../Services/ApiService'
 import TimeLine from '../../TimeLine/TimeLine.view'
 import Categories from '../../Categories/Categories.view'
+import PosterDetails from '../../PosterDetails/PosterDetails.view'
 import Tags from '../../Tags/Tags.view'
 
 export default class HomePage extends Component  {
@@ -22,7 +23,8 @@ export default class HomePage extends Component  {
             `
 
 		const _printTimeLinePage = function(){
-		    $('.home-page').html(new TimeLine().getHtml());
+		    //$('.home-page').html(new TimeLine().getHtml());
+		    $('.home-page').html(new PosterDetails().getHtml());
 		    $('.timeline-item').off().on('click', function(){
 		        _printCategoriesPage({
 		            decade: $(this).data('decade')
