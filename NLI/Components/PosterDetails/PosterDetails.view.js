@@ -1,6 +1,5 @@
 ﻿import './Categories.scss'
 import Component from '../Abstracts/Component/Component'
-import PosterDetails from './Components/CategoryList/CategoryList.view'
 
 export default class PosterDetails extends Component  {
 	constructor() {

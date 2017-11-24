@@ -3,10 +3,15 @@ import Component from '../Abstracts/Component/Component'
 import tags from '../../Api/tags.json'
 import TagList from './Components/TagList/TagList.view'
 import PosterList from './Components/PosterList/PosterList.view'
+import decades from '../../Api/decades.json'
+import categories from '../../Api/categories.json'
 
 export default class Tags extends Component  {
-	constructor() {
-		super();
+	constructor(props) {
+	    super();
+	    const decade = decades.items.find(d => d.value == props.decade).title;
+	    const category = categories.items.find(c => c.value == props.category).title;
+	    $('.site-header-title').html(`${category} ${decade}`);
 		this.markup = 
             `
              <div class="tags">

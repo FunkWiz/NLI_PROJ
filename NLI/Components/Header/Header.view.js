@@ -9,7 +9,7 @@ export default class Header extends Component  {
         this.markup = 
             `<header class="site-header">
                 <div class="site-header-content-wrp">
-                    <h2 class="site-header-title">מוסיקה 50s</h2>
+                    <h2 class="site-header-title"></h2>
                     <button class="site-header-arrow-back"></button>
                 </div>
             </header>`

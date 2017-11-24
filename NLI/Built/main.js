@@ -181,7 +181,7 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0__Abstracts_Component_Component_
         super();
         this.markup = `<header class="site-header">
                 <div class="site-header-content-wrp">
-                    <h2 class="site-header-title">מוסיקה 50s</h2>
+                    <h2 class="site-header-title"></h2>
                     <button class="site-header-arrow-back"></button>
                 </div>
             </header>`;
@@ -695,26 +695,48 @@ class HomePage extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Componen
 		this.markup = `
              <article class="site-page home-page"></article>
             `;
-
+		let _sharedInfo = {};
 		const _printTimeLinePage = function () {
+			$('#root').attr('class', 'timeline-page');
 			$('.home-page').html(new __WEBPACK_IMPORTED_MODULE_3__TimeLine_TimeLine_view__["a" /* default */]().getHtml());
 			$('.timeline-item').off().on('click', function () {
+				const decade = $(this).data('decade');
 				_printCategoriesPage({
-					decade: $(this).data('decade')
+					decade: decade
 				});
+				_sharedInfo = {
+					decade: decade
+				};
 			});
+			$(window).scrollTop(0);
 		};
 		const _printCategoriesPage = function (data) {
+			$('#root').attr('class', 'categories-page');
 			$('.home-page').html(new __WEBPACK_IMPORTED_MODULE_4__Categories_Categories_view__["a" /* default */](data).getHtml());
 			$('.category-item').off().on('click', function () {
 				$(this).addClass('selected').siblings().removeClass('selected');
+
+				const categoryId = $(this).data('category');
+				_printTagsPage({
+					category: categoryId,
+					decade: _sharedInfo.decade
+				});
+				_sharedInfo = {
+					decade: _sharedInfo.decade,
+					category: categoryId
+				};
 			});
+			$(window).scrollTop(0);
 		};
 		const _printTagsPage = function (data) {
+			$('#root').attr('class', 'tags-page');
 			$('.home-page').html(new __WEBPACK_IMPORTED_MODULE_5__Tags_Tags_view__["a" /* default */](data).getHtml());
+			$(window).scrollTop(0);
 		};
 		const _printPosterPage = function (data) {
+			$('#root').attr('class', 'poster-page');
 			$('.home-page').html(new PosterDetails(data).getHtml());
+			$(window).scrollTop(0);
 		};
 
 		this.onLoad(function () {
@@ -772,6 +794,7 @@ class TimeLineItem extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Comp
 class TimeLine extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__["a" /* default */] {
 	constructor() {
 		super();
+		$('.site-header-title').html('בחרו עשור');
 		this.markup = `
              <div class="timeline">${new __WEBPACK_IMPORTED_MODULE_2__Components_TimeLineList_TimeLineList_view__["a" /* default */]({ items: __WEBPACK_IMPORTED_MODULE_3__Api_decades_json___default.a.items }).getHtml()}</div>
             `;
@@ -1231,6 +1254,7 @@ class Categories extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Compon
       return a + b;
     });
 
+    $('.site-header-title').html('');
     this.markup = `
              <div class="categories">
                 <div class="categories-heading">
@@ -1389,6 +1413,12 @@ class TagList extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Api_tags_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Api_tags_json__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_TagList_TagList_view__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Components_PosterList_PosterList_view__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Api_decades_json__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Api_decades_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__Api_decades_json__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Api_categories_json__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Api_categories_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__Api_categories_json__);
+
+
 
 
 
@@ -1396,13 +1426,17 @@ class TagList extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component
 
 
 class Tags extends __WEBPACK_IMPORTED_MODULE_1__Abstracts_Component_Component__["a" /* default */] {
-  constructor() {
+  constructor(props) {
     super();
+    const decade = __WEBPACK_IMPORTED_MODULE_5__Api_decades_json___default.a.items.find(d => d.value == props.decade).title;
+    const category = __WEBPACK_IMPORTED_MODULE_6__Api_categories_json___default.a.items.find(c => c.value == props.category).title;
+    $('.site-header-title').html(`${category} ${decade}`);
     this.markup = `
              <div class="tags">
                 <div class="tags-heading">${new __WEBPACK_IMPORTED_MODULE_3__Components_TagList_TagList_view__["a" /* default */]({ items: __WEBPACK_IMPORTED_MODULE_2__Api_tags_json___default.a.items }).getHtml()}</div>
+                
                 <h2 class="tag-main-title-wrp">
-                  <span class="tag-main-title">#ג'אז</span>
+                  <span class="tag-main-title">#ג'אז</span><br>
                   <span class="tag-main-title-count">353</span>
                 </h2>
                 <div class="tags-content-wrp">${new __WEBPACK_IMPORTED_MODULE_4__Components_PosterList_PosterList_view__["a" /* default */]({ items: [{}, {}, {}, {}, {}, {}, {}, {}, {}] }).getHtml()}</div>

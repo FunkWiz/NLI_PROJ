@@ -20,28 +20,49 @@ export default class HomePage extends Component  {
             `
              <article class="site-page home-page"></article>
             `
-
+		let _sharedInfo = {};
 		const _printTimeLinePage = function(){
+		    $('#root').attr('class', 'timeline-page');
 		    $('.home-page').html(new TimeLine().getHtml());
 		    $('.timeline-item').off().on('click', function(){
+		        const decade = $(this).data('decade');
 		        _printCategoriesPage({
-		            decade: $(this).data('decade')
+		            decade: decade
 		        });
+		        _sharedInfo = {
+                    decade: decade
+		        };
 		    });
+		    $(window).scrollTop(0);
 		}
 		const _printCategoriesPage = function(data){
+		    $('#root').attr('class', 'categories-page');
 		    $('.home-page').html(new Categories(data).getHtml());
 		    $('.category-item').off().on('click', function(){
 		        $(this).addClass('selected').siblings().removeClass('selected');
+
+		        const categoryId = $(this).data('category');
+		        _printTagsPage({
+		            category: categoryId,
+                    decade: _sharedInfo.decade
+		        });
+		        _sharedInfo = {
+                    decade: _sharedInfo.decade,
+		            category: categoryId
+		        };
 		    });
-            
+		    $(window).scrollTop(0);
 		}
 		const _printTagsPage = function(data){
+		    $('#root').attr('class', 'tags-page');
 		    $('.home-page').html(new Tags(data).getHtml());
+		    $(window).scrollTop(0);
             
 		}
 		const _printPosterPage = function(data){
+		    $('#root').attr('class', 'poster-page');
 		    $('.home-page').html(new PosterDetails(data).getHtml());
+		    $(window).scrollTop(0);
 		}
 
 		this.onLoad(function(){

@@ -10,6 +10,7 @@ export default class Categories extends Component  {
 	    const _decade = decades.items.find(d => d.value == props.decade); 
 	    const decadeSum = categories.items.map(c => c.analytics[props.decade].count).reduce(function(a, b) {return a+b;});
 
+	    $('.site-header-title').html('');
 	    this.markup = 
             `
              <div class="categories">
