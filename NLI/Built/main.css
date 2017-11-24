@@ -332,7 +332,15 @@ body {
   display: flex;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+          flex-wrap: wrap;
+  margin: 0 auto; }
+
+.selected {
+  border: 3px solid #2475FA !important; }
+
+.category-item {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box; }
 .categories-content-wrp {
   display: -webkit-box;
   display: -webkit-flex;
