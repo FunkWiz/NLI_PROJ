@@ -48,3 +48,12 @@
 
     }
 }
+
+
+.poster-item, .tag-item{
+    filter:grayscale(100%);
+    transition:filter .2s;
+    &:hover{
+        filter:unset;
+    }
+}

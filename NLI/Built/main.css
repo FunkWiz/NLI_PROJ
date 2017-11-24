@@ -481,6 +481,17 @@ body .tag-main-title {
 body .tag-main-title-count {
   font-size: 24px;
   font-family: 'Arimo Regular'; }
+
+.poster-item, .tag-item {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  transition: -webkit-filter .2s;
+  -moz-transition: filter .2s;
+  transition: filter .2s;
+  transition: filter .2s, -webkit-filter .2s; }
+  .poster-item:hover, .tag-item:hover {
+    -webkit-filter: unset;
+            filter: unset; }
 body {
   background-color: transparent; }
   body .app-wrap {
