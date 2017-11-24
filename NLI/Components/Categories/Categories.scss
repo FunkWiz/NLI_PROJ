@@ -25,12 +25,12 @@
     margin: 0 auto;
     }
 
-    .selected{
-        border: 3px solid #2475FA !important;
-    }
 
     .category-item{
         box-sizing: border-box;
+    &.selected{
+        border: 3px solid #2475FA !important;
+    }
     }
 
     .continue-btn{
