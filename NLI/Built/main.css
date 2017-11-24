@@ -558,3 +558,71 @@ body {
     font-size: 26px;
     font-family: 'Arimo Regular';
     color: #555555; }
+body .poster-details-image {
+  background: url("/Content/images/de_los_insurgentes_avenue_chihuahua_mexico.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -moz-background-size: cover;
+       background-size: cover;
+  height: 600px;
+  width: 90%;
+  margin: 0 auto;
+  -moz-border-radius: 10px;
+       border-radius: 10px; }
+
+body .poster-details-content-wrp {
+  width: 85%;
+  margin: 0 auto; }
+
+body .poster-details-info-title {
+  color: #2475FA;
+  font-family: 'Arimo Regular';
+  font-size: 34px;
+  text-align: right;
+  margin: 3rem 0; }
+
+body .poster-details-info-list {
+  color: #5C5C5C; }
+
+body .poster-details-info-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 24px;
+  font-family: 'Arimo Regular';
+  margin: 2rem 0; }
+
+body .poster-details-info-item-title {
+  font-weight: bold;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex; }
+  body .poster-details-info-item-title:before {
+    content: '';
+    background: url(/Content/icons/bullet@3x.png);
+    width: 20px;
+    height: 20px;
+    /* position: absolute; */
+    /* margin: 1rem; */
+    display: inline-block;
+    -moz-background-size: cover;
+         background-size: cover;
+    margin-left: 5px;
+    /* float: right; */ }
+
+body .poster-details-heading {
+  margin: 6rem 0; }

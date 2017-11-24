@@ -11,6 +11,6 @@ export default class CategoryList extends Component  {
 	        music: props.items.find(c => c.value == 'music').analytics[props.decade],
 	        sport: props.items.find(c => c.value == 'sport').analytics[props.decade]
 	    };
-	    this.markup = `<ul class="category-list">${props.items.map(i => new CategoryItem(Object.assign(i, {analytics: statistics[i.value]})).getHtml()).join('')}</ul>`;
+	    this.markup = `<ul class="category-list">${props.items.map(i => new CategoryItem(Object.assign({},i, {analytics: statistics[i.value]})).getHtml()).join('')}</ul>`;
 	}
 }

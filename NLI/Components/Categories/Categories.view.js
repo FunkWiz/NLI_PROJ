@@ -7,8 +7,8 @@ import decades from '../../Api/decades.json'
 export default class Categories extends Component  {
 	constructor(props) {
 	    super();
-	    const _decade = decades.items.find(d => d.value == props.decade); 
-	    const decadeSum = categories.items.map(c => c.analytics[props.decade].count).reduce(function(a, b) {return a+b;});
+	    const _decade = decades.items.find(d => d.value == props.decade);
+	    const decadeSum = categories.items.map(c => c.analytics[props.decade].count).slice(0).reduce(function(a, b) {return a+b;});
 
 	    $('.site-header-title').html('');
 	    this.markup = 
@@ -24,7 +24,6 @@ export default class Categories extends Component  {
                     <div class="categories-content-wrp">${new CategoryList({items: categories.items, decade: props.decade}).getHtml()}</div>
                 </div>
              </div>
-             <button class="btn continue-btn">המשך</button>
             `
 	}
 }
