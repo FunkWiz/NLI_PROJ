@@ -1,5 +1,10 @@
 ﻿body {
 
+    .app-wrap{
+        max-width: 628px;
+        margin: 0 auto;
+    }
+
     background-color: transparent;
 
     .tag-list{
@@ -52,13 +57,14 @@
         background-position: center center;
         -moz-background-size: cover;
         background-size: cover;
+        /*
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
-        /* flex-wrap: wrap; */
-        /* justify-content: space-between; */
-        width: 20vw;
-    height: 135px;
+         flex-wrap: wrap; 
+         justify-content: space-between;*/
         margin: 10px;
+        width: 135px;
+    height: 135px;
 
         &:hover{
             cursor:pointer;
